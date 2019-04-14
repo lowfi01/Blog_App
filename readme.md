@@ -1,24 +1,16 @@
-# React Boilerplate
+## Blog Application
 
-Boilerplate contains
-  - react
-  - redux
-  - babel , es6, polyfill
-  - webpack
-  - jest , enzyme
-  - scss support
-  - firebase, 0Auth googleAuth
-  - loading screen
+Simple front end blog application, made to implement different backend implementations.
 
+#Goals
 
-
-
+  - allow users to create blogs
+  - add simple OAuth
+  - add simple domain name
+  - optimize speed
+  - implement, two different apis interchanably
+  - add file & image upload support
+  - possibly push for my own personal use for blogging in the future
 
 
-# Git Commands
-
-git init - Create a new git repo
-git status - View the changes to your project code
-git add - Add files to staging area
-git commit - Creates a new commit with files from staging area
-git log - View recent commits
+  ![img](Version1.jpg  "Current")
