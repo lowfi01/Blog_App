@@ -7,14 +7,13 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 
-// Firebase & GoogleAuth Setup
+import configureStore from './store/configureStore';
+
 // import {firebase, googleAuthProvider} from './firebase/firebase';
 import AppRouter, { history } from './routers/AppRouter';
 // import { login, logout } from './actions/auth';
+import {startsetBlogPosts} from './actions/blog';
 import LoadingPage from './components/LoadingPage';
-
-// Redux Setup
-import configureStore from './store/configureStore';
 
 const store = configureStore();
 
@@ -37,8 +36,9 @@ const jsx = (
 // Loading Page  -- will not run if above code is executed.
 ReactDom.render(<LoadingPage />, document.getElementById('app'));
 
-ReactDom.render(jsx, document.getElementById('app')); // render the application
-
+store.dispatch(startsetBlogPosts()).then(() => {
+  ReactDom.render(jsx, document.getElementById('app'));
+});
 
 // Logic will always run, so do not worry
 // firebase.auth().onAuthStateChanged((user) => { // implement firebase googleAuthProvider

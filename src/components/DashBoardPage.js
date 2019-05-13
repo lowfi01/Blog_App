@@ -1,10 +1,13 @@
 import React from 'react';
 
-export const DashBoardPage = (props) => (
-    <div>
-      Dashboard Page Content
-    </div>
+import Bloglist from './Bloglist';
+import BlogListFilter from './BlogListFilter';
 
+export const DashboardPage = (props) => (
+    <div>
+      <BlogListFilter />
+      <Bloglist />
+    </div>
   )
 
-export default DashBoardPage;
+export default DashboardPage;

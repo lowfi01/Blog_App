@@ -5,18 +5,19 @@ import { startLogout } from '../actions/auth';
 
 export const Header = (props) => (
 
-  <header className="header">
+  <div className="header">
     <div className="content-container">
       <div className="header__content">
-        <Link className="header__title" to="/dashboard" activeClassName="is-active">
+        <Link className="header__title" to="/" activeClassName="is-active">
           <h1>Blog App</h1>
         </Link>
+        <Link to="/create"><h2>Create</h2></Link>
         <button className="button button--link" onClick={ () => {
           // props.startLogout();
           }}>Logout</button>
       </div>
     </div>
-  </header>
+  </div>
 );
 
 const mapDispatchToProps = (dispatch) => ({
