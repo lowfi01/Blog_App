@@ -7,7 +7,8 @@ class BlogFormPage extends React.Component{
 
     this.state = {
       title: props.blog ? props.blog.title : '',
-      content: props.blog ? props.blog.content : ''
+      content: props.blog ? props.blog.content : '',
+      date: props.date ? props.blog.date : ''
     }
   }
 
@@ -27,7 +28,10 @@ class BlogFormPage extends React.Component{
 
   onSubmit = (e) => {
     e.preventDefault();
-    this.props.onSubmit(this.state);
+      this.props.onSubmit({
+        ...this.state,
+        date: Date.now()
+      });
   }
 
   render() {
